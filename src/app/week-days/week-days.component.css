@@ -1,0 +1,26 @@
+.wrapper {
+  background: linear-gradient(to right, #1e8cc8, #00dcb4);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  padding: 1em;
+  gap: 0.7em;
+  border-radius: 10px;
+}
+
+.weekday {
+  color: white;
+  border: white 2px dashed;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+}
+
+.highlight {
+  border-style: solid;
+  border-width: 3px;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div
+    class="weekday"
+    *ngFor="let weekday of weekDays"
+    [attr.aria-label]="
+      weekday.toLocaleDateString(undefined, { weekday: 'long' })
+    "
+    [class.highlight]="isCurrentWeekday(weekday)"
+  >
+    {{ weekday | date: "E" }}
+  </div>
+</div>
