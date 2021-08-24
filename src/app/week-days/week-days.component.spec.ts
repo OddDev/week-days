@@ -14,7 +14,7 @@ describe('WeekDaysComponent', () => {
 
   beforeEach(() => {
     jasmine.clock().install();
-    jasmine.clock().mockDate(new Date('2021-08-16T23:59:30'));
+    jasmine.clock().mockDate(new Date('1995-12-16T23:59:30'));
     fixture = TestBed.createComponent(WeekDaysComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -36,7 +36,7 @@ describe('WeekDaysComponent', () => {
 
   it('should highlight the correct day', () => {
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.highlight').textContent).toContain('Mon');
+    expect(compiled.querySelector('.highlight').textContent).toContain('Sat');
   });
 
   it('should automatically update to the right day', () => {
@@ -44,7 +44,7 @@ describe('WeekDaysComponent', () => {
     // Next day
     jasmine.clock().tick(40 * 1000);
     fixture.detectChanges();
-    expect(compiled.querySelector('.highlight').textContent).toContain('Tue');
+    expect(compiled.querySelector('.highlight').textContent).toContain('Sun');
   });
 
   afterEach(() => {
